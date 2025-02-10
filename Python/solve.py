@@ -21,3 +21,5 @@ imprimir_arreglo(arr)
 
 # Mostrar el tiempo de ejecución
 print(f"\nTiempo de ejecución: {fin - inicio:.6f} segundos")
+
+#
