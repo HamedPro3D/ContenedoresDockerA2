@@ -45,7 +45,7 @@ jobs:
           cd Python && tiempos["Python"]=$(medir_tiempo "python3 solve.py") && cd ..
           
           # Rust
-          cd Rust && cargo build --release && tiempos["Rust"]=$(medir_tiempo "./target/release/solve") && cd ..
+          cd Rust && cargo build --release && tiempos["Rust"]=$(medir_tiempo "./target/release/solve.rs") && cd ..
           
           # Mostrar resultados
           echo "Resultados de Benchmark:"
