@@ -20,7 +20,7 @@ ejecutar() {
 
 
 ejecutar "Python" "python3 solve.py"
-ejecutar "JavaScript" "node solve.js"
+ejecutar "Javascript" "node solve.js"
 ejecutar "Go" "go run solve.go"
 ejecutar "Rust" "rustc solve.rs -o solve_rs && ./solve_rs"
 ejecutar "Java" "javac solve.java && java solve"

@@ -1,4 +1,4 @@
-public class solve {
+public class Solve {
 
     public static void ordenarArreglo(int[] arr) {
         int n = arr.length;
