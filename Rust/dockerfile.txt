@@ -1,0 +1,20 @@
+# Usa la imagen oficial de Rust
+FROM rust:latest AS builder
+
+# Establecer el directorio de trabajo en el contenedor
+WORKDIR /usr/src/benchmark_rust
+
+# Copiar archivos del proyecto
+COPY Cargo.toml Cargo.lock ./
+COPY src ./src
+
+# Compilar el programa en modo release
+RUN cargo build --release
+
+# Crear una nueva imagen más liviana solo con el binario
+FROM debian:latest
+WORKDIR /usr/src/benchmark_rust
+COPY --from=builder /usr/src/benchmark_rust/target/release/benchmark_rust .
+
+# Ejecutar el programa
+CMD ["./benchmark_rust"]
