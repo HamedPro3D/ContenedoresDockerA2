@@ -39,7 +39,7 @@ jobs:
           cd Java && javac solve.java && tiempos["Java"]=$(medir_tiempo "java solve") && cd ..
           
           # JavaScript
-          cd Javascript && tiempos["JavaScript"]=$(medir_tiempo "node solve.js") && cd ..
+          cd Javascript && tiempos["Javascript"]=$(medir_tiempo "node solve.js") && cd ..
           
           # Python
           cd Python && tiempos["Python"]=$(medir_tiempo "python3 solve.py") && cd ..
